@@ -6,7 +6,7 @@
   "homepage": "http://github.com/coderaiser/version-io",
   "main": "lib/version.js",
   "bin": {
-    "version-io": "bin/version.js"
+    "version": "bin/version.js"
   },
   "repository": {
     "type": "git",
