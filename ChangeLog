@@ -1,3 +1,9 @@
+2014.10.31, v1.0.2
+
+fix:
+- (package) bin: version-io -> version
+
+
 2014.10.31, v1.0.1
 
 feature:
