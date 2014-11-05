@@ -40,7 +40,7 @@ npm i version-io --save
 
 You could update version in `package.json` with:
 ```js
-var version = require('minor');
+var version = require('version-io');
 
 version('1.1.1' [,dir], function(error) {
     if (error)
