@@ -13,8 +13,8 @@
     "url": "git://github.com/coderaiser/version-io.git"
   },
   "dependencies": {
-    "minor": "~1.2.0",
-    "util-io": "~1.6.0"
+    "execon": "~1.0.1",
+    "minor": "~1.2.0"
   },
   "license": "MIT"
 }
