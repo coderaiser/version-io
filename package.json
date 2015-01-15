@@ -1,6 +1,6 @@
 {
   "name": "version-io",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Semantic versioning tool. Apply major, minor, patch and version to package.json.",
   "homepage": "http://github.com/coderaiser/version-io",
