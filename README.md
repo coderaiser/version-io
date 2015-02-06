@@ -38,10 +38,12 @@ Install `version-io` with:
 npm i version-io --save
 ```
 
-Format: `version(number [,dir], callback);`
+Format: `version(number [,options], callback);`
 
 - `number` could be new version number or `minor|major|patch`
-- `dir` is optional parameter, it is `process.cwd()` by default
+- `options` is optional parameter:
+    `options.dir` is `process.cwd()` by default
+    `options.name` is `package` by default, but could be any json file.
 
 You could update version in `package.json` with:
 ```js
