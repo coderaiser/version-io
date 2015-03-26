@@ -7,7 +7,7 @@
         args        = process.argv.slice(2),
         arg         = args[0];
         
-    if (arg === '-v' || arg === '--v')
+    if (arg === '-v' || arg === '--version')
         console.log('v' + require('../package').version);
     else
         version(arg, function(error, data) {
