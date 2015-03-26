@@ -1,3 +1,9 @@
+2015.03.26, v1.1.1
+
+fix:
+- (version) --v -> --version
+
+
 2015.02.06, v1.1.0
 
 feature:
