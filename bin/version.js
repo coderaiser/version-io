@@ -17,7 +17,7 @@
             console.error('package.json not found');
         else
             console.log(info.version || 'no version');
-    } else if (arg === '-v' || arg === '--version') {
+    } else if (/^(-v|--version)$/.test(arg)) {
         console.log('v' + require('../package').version);
     } else {
         version(arg, function(error, data) {
