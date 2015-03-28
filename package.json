@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "minor": "~1.2.0",
-    "readjson": "~1.0.2"
+    "readjson": "~1.0.2",
+    "try-require": "~1.0.0"
   },
   "license": "MIT"
 }
