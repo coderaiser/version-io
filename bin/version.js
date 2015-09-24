@@ -4,17 +4,25 @@
     'use strict';
     
     var version     = require('..'),
-        tryRequire  = require('try-require'),
+        readjson    = require('readjson'),
+        tryCatch    = require('try-catch'),
         args        = process.argv.slice(2),
         arg         = args[0],
         name        = process.cwd() + '/package.json',
+        
+        error,
         info;
     
     if (!arg) {
-        info = tryRequire(name) || {};
+        error = tryCatch(function() {
+            info = readjson.sync(name);
+        });
         
-        if (!info)
-            console.error('package.json not found');
+        if (error)
+            if (error.code === 'ENOENT')
+                console.error('package.json: not found');
+            else
+                console.error('package.json:', error.message);
         else
             console.log(info.version || 'no version');
     } else if (/^(-v|--version)$/.test(arg)) {
