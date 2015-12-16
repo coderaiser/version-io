@@ -15,7 +15,8 @@
   "dependencies": {
     "minor": "~1.2.0",
     "readjson": "~1.1.0",
-    "try-catch": "~1.0.0"
+    "try-catch": "~1.0.0",
+    "writejson": "~1.1.0"
   },
   "license": "MIT"
 }
