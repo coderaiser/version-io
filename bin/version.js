@@ -33,7 +33,7 @@ function main() {
         return console.error('package.json:', error.message);
     }
     
-    if (/^(-v|--version)$/.test(arg)) {
+    if (/^(-v|--version)$/.test(arg))
         return console.log('v' + require('../package').version);
     
     version(arg, (error, data) => {
