@@ -45,7 +45,7 @@ You could update version in `package.json` with:
 ```js
 var version = require('version-io');
 
-version('1.1.1', function(error) {
+version('1.1.1', (error) => {
     if (error)
         console.error(error.message);
 });
