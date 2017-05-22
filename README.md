@@ -38,12 +38,8 @@ Install `version-io` with:
 npm i version-io --save
 ```
 
-Format: `version(number [,options], callback);`
-
+Format: `version(number, callback);`
 - `number` could be new version number or `minor|major|patch`
-- `options` is optional parameter:
-    `options.dir` is `process.cwd()` by default
-    `options.name` is `package` by default, but could be any json file.
 
 You could update version in `package.json` with:
 ```js
@@ -58,3 +54,4 @@ version('1.1.1', function(error) {
 ## License
 
 MIT
+

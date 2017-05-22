@@ -13,10 +13,14 @@
     "url": "git://github.com/coderaiser/version-io.git"
   },
   "dependencies": {
-    "minor": "~1.2.0",
-    "readjson": "~1.1.0",
-    "try-catch": "~1.0.0",
-    "writejson": "~1.1.0"
+    "fullstore": "^1.0.0",
+    "minor": "^1.2.0",
+    "readjson": "^1.1.0",
+    "try-catch": "^1.0.0",
+    "writejson": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=4"
   },
   "license": "MIT"
 }

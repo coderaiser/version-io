@@ -2,35 +2,46 @@
 
 'use strict';
 
-var version     = require('..'),
-    readjson    = require('readjson'),
-    tryCatch    = require('try-catch'),
-    args        = process.argv.slice(2),
-    arg         = args[0],
-    name        = process.cwd() + '/package.json',
-    
-    error,
-    info;
+const version = require('..');
+const readjson = require('readjson');
+const tryCatch = require('try-catch');
+const args = process.argv.slice(2);
+const arg = args[0];
+const pkgUp = require('pkg-up');
 
-if (!arg) {
-    error = tryCatch(function() {
-        info = readjson.sync(name);
-    });
-    
-    if (error)
+main();
+
+function main() {
+    if (!arg) {
+        let info;
+        
+        const name = pkgUp.sync();
+        
+        if (!name)
+            return console.error('package.json: not found');
+        
+        const error = tryCatch(() => {
+            info = readjson.sync(name);
+        });
+        
+        if (!error)
+            return console.log(info.version || 'no version');
+        
         if (error.code === 'ENOENT')
-            console.error('package.json: not found');
-        else
-            console.error('package.json:', error.message);
-    else
-        console.log(info.version || 'no version');
-} else if (/^(-v|--version)$/.test(arg)) {
-    console.log('v' + require('../package').version);
-} else {
-    version(arg, function(error, data) {
+            return console.error('package.json: not found');
+        
+        return console.error('package.json:', error.message);
+    }
+    
+    if (/^(-v|--version)$/.test(arg)) {
+        return console.log('v' + require('../package').version);
+    
+    version(arg, (error, data) => {
         if (error)
-            console.error(error.message);
-        else if (data)
+            return console.error(error.message);
+        
+        if (data)
             console.log(data);
     });
 }
+
