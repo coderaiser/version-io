@@ -1,3 +1,9 @@
+2017.05.22, v2.0.0
+
+feature:
+- (version) es2015-ify: rm options
+
+
 2015.12.17, v1.2.5
 
 fix:
