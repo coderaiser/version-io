@@ -1,3 +1,10 @@
+2017.05.22, v2.0.1
+
+fix:
+- (package) pkg-up v2.0.0
+- (version) rm "{"
+
+
 2017.05.22, v2.0.0
 
 feature:
