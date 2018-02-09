@@ -13,16 +13,15 @@ main();
 
 function main() {
     if (!arg) {
-        let info;
-        
         const name = pkgUp.sync();
         
         if (!name)
             return console.error('package.json: not found');
         
-        const error = tryCatch(() => {
-            info = readjson.sync(name);
-        });
+        const result = tryCatch(readjson.sync, name);
+        
+        const error = result[0];
+        const info = result[1];
         
         if (!error)
             return console.log(info.version || 'no version');
