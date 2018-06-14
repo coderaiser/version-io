@@ -43,7 +43,7 @@ Format: `version(number, callback);`
 
 You could update version in `package.json` with:
 ```js
-var version = require('version-io');
+const version = require('version-io');
 
 version('1.1.1', (error) => {
     if (error)
