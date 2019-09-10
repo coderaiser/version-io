@@ -13,7 +13,6 @@
     "url": "git://github.com/coderaiser/version-io.git"
   },
   "dependencies": {
-    "fullstore": "^2.0.2",
     "minor": "^1.2.0",
     "pkg-up": "^3.1.0",
     "readjson": "^1.1.0",
@@ -21,7 +20,17 @@
     "writejson": "^2.0.1"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
+    "madrun": "^3.0.2"
+  },
+  "scripts": {
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint"
+  }
 }
