@@ -1,3 +1,19 @@
+2020.04.28, v4.0.1
+
+fix:
+- (version) condition
+- (version) add tryToCatch
+- (version) rm callback assertion
+
+
+2020.04.28, v4.0.1
+
+fix:
+- (version) condition
+- (version) add tryToCatch
+- (version) rm callback assertion
+
+
 2020.04.28, v4.0.0
 
 feature:
