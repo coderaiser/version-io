@@ -17,7 +17,7 @@
     "pkg-up": "^3.1.0",
     "readjson": "^1.1.0",
     "try-catch": "^3.0.0",
-    "writejson": "^2.0.1"
+    "writejson": "^3.0.0"
   },
   "engines": {
     "node": ">=8"
