@@ -17,7 +17,7 @@ async function main() {
         return console.log('v' + require('../package').version);
      
     if (arg) {
-        const [e, data] = await version(arg);
+        const [e, data] = await tryToCatch(version, arg);
         
         if (e)
             return console.error(e.message);
