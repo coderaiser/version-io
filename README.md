@@ -43,12 +43,9 @@ Format: `version(number, callback);`
 
 You could update version in `package.json` with:
 ```js
-const version = require('version-io');
+import version from 'version-io';
 
-version('1.1.1', (error) => {
-    if (error)
-        console.error(error.message);
-});
+const version = await version();
 ```
 
 ## License
