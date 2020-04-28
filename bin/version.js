@@ -22,7 +22,10 @@ async function main() {
         if (e)
             return console.error(e.message);
         
-        return console.log(data);
+        if (data)
+            console.log(data);
+        
+        return;
     }
     
     const name = await pkgUp();
