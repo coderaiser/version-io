@@ -15,7 +15,7 @@
   "dependencies": {
     "minor": "^1.2.0",
     "pkg-up": "^3.1.0",
-    "readjson": "^1.1.0",
+    "readjson": "^2.0.1",
     "try-catch": "^3.0.0",
     "writejson": "^3.0.0"
   },
