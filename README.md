@@ -6,7 +6,6 @@ Semantic versioning tool. Apply major, minor, patch and version to `package.json
 
 `npm i version-io -g`
 
-
 ## How to use?
 
 Show current version:
@@ -15,6 +14,7 @@ Show current version:
 # version
 v1.0.0
 ```
+
 Set new version:
 
 ```
@@ -39,16 +39,17 @@ npm i version-io --save
 ```
 
 Format: `version(number, callback);`
+
 - `number` could be new version number or `minor|major|patch`
 
 You could update version in `package.json` with:
-```js
-import version from 'version-io';
 
-const version = await version();
+```js
+import versionio from 'version-io';
+
+const version = await versionio();
 ```
 
 ## License
 
 MIT
-

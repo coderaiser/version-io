@@ -1,6 +1,7 @@
 {
   "name": "version-io",
   "version": "4.0.1",
+  "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Semantic versioning tool. Apply major, minor, patch and version to package.json.",
   "homepage": "http://github.com/coderaiser/version-io",
@@ -10,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/version-io.git"
+    "url": "git+https://github.com/coderaiser/version-io.git"
   },
   "dependencies": {
     "minor": "^1.2.0",
-    "pkg-up": "^5.0.0",
+    "package-up": "^5.0.0",
     "readjson": "^2.0.1",
     "try-to-catch": "^3.0.0",
     "writejson": "^3.0.0"

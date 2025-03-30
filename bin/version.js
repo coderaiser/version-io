@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 
-'use strict';
+import process from 'node:process';
+import {createRequire} from 'node:module';
+import readjson from 'readjson';
+import tryToCatch from 'try-to-catch';
+import {packageUp} from 'package-up';
+import version from '../lib/version.js';
 
-const readjson = require('readjson');
-const tryToCatch = require('try-to-catch');
+const require = createRequire(import.meta.url);
+const [arg] = process.argv.slice(2);
 
-const version = require('..');
-const args = process.argv.slice(2);
-const arg = args[0];
-const pkgUp = require('pkg-up');
-
-main()
+main();
 
 async function main() {
     if (/^(-v|--version)$/.test(arg))
         return console.log('v' + require('../package').version);
-     
+    
     if (arg) {
         const [e, data] = await tryToCatch(version, arg);
         
@@ -28,7 +28,7 @@ async function main() {
         return;
     }
     
-    const name = await pkgUp();
+    const name = await packageUp();
     
     if (!name)
         return console.error('package.json: not found');
@@ -43,4 +43,3 @@ async function main() {
     
     return console.error('package.json:', error.message);
 }
-
