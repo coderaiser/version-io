@@ -27,7 +27,7 @@
     "eslint": "^9.23.0",
     "eslint-plugin-putout": "^26.1.0",
     "madrun": "^11.0.0",
-    "putout": "^7.23.0"
+    "putout": "^39.5.0"
   },
   "scripts": {
     "lint": "madrun lint",
