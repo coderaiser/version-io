@@ -20,12 +20,11 @@
     "writejson": "^3.0.0"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=20"
   },
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-putout": "^3.7.1",
     "madrun": "^5.5.0",
     "putout": "^7.23.0"
