@@ -1,3 +1,13 @@
+2025.03.30, v5.0.0
+
+feature:
+- 1624b5d version-io: migrate to ESM
+- a11fae2 version-io: putout v39.5.0
+- 626950e version-io: pkg-up v5.0.0
+- 7aff931 version-io: madrun v11.0.0
+- cacb058 version-io: eslint-plugin-putout v26.1.0
+- 74a5de6 version-io: eslint v9.23.0
+
 2020.04.28, v4.0.1
 
 fix:
