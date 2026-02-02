@@ -44,6 +44,7 @@ if (!error) {
     const result = stringify({
         version: info.version,
         engines: info.engines,
+        peerDependencies: info.peerDependencies,
     }, null, 4);
     
     console.log(codeFrameColumns(result, {}, {
