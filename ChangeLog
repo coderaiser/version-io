@@ -1,3 +1,8 @@
+2026.02.02, v6.1.0
+
+feature:
+- 8960b49 version: add support of peerDependencies
+
 2026.02.02, v6.0.0
 
 feature:
