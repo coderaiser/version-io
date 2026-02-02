@@ -1,3 +1,13 @@
+2026.02.02, v6.0.0
+
+feature:
+- 97aea7c version-io: add -e
+- dd68ea2 version-io: drop support of node < 22
+- 0a6d90b version-io: try-to-catch v4.0.5
+- a8c2a33 version-io: putout v41.16.0
+- 566b17c version-io: madrun v12.1.3
+- b9bb256 version-io: eslint-plugin-putout v30.0.2
+
 2025.03.30, v5.0.0
 
 feature:
