@@ -1,0 +1,15 @@
+{
+    "extension": [".js"],
+    "check-coverage": false,
+    "all": true,
+    "exclude": [
+        ".*",
+        "**/bin",
+        "*.config.*",
+        "**/*.spec.*"
+    ],
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
+}
