@@ -17,7 +17,7 @@
     "minor": "^1.2.0",
     "package-up": "^5.0.0",
     "readjson": "^2.0.1",
-    "try-to-catch": "^3.0.0",
+    "try-to-catch": "^4.0.5",
     "writejson": "^3.0.0"
   },
   "engines": {
