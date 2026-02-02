@@ -1,45 +1,59 @@
 #!/usr/bin/env node
 
 import process from 'node:process';
-import {createRequire} from 'node:module';
 import readjson from 'readjson';
-import tryToCatch from 'try-to-catch';
+import {tryToCatch} from 'try-to-catch';
 import {packageUp} from 'package-up';
-import version from '../lib/version.js';
+import {updateVersion} from '../lib/version.js';
 
-const require = createRequire(import.meta.url);
+const {stringify} = JSON;
+
 const [arg] = process.argv.slice(2);
 
-main();
+const isExtended = arg && arg === '-e';
 
-async function main() {
-    if (/^(-v|--version)$/.test(arg))
-        return console.log('v' + require('../package').version);
+if (/^(-v|--version)$/.test(arg))
+    process.exit();
+
+if (arg && !isExtended) {
+    const [e, data] = await tryToCatch(updateVersion, arg);
     
-    if (arg) {
-        const [e, data] = await tryToCatch(version, arg);
-        
-        if (e)
-            return console.error(e.message);
-        
-        if (data)
-            console.log(data);
-        
-        return;
+    if (e)
+        process.exit();
+    
+    if (data)
+        console.log(data);
+    
+    process.exit();
+}
+
+const name = await packageUp();
+
+if (!name)
+    process.exit();
+
+const [error, info] = await tryToCatch(readjson, name);
+
+if (!error) {
+    if (!isExtended) {
+        console.log(info.version || '<no version>');
+        process.exit();
     }
     
-    const name = await packageUp();
+    const {codeFrameColumns} = await import('@putout/babel');
+    const result = stringify({
+        version: info.version,
+        engines: info.engines,
+    }, null, 4);
     
-    if (!name)
-        return console.error('package.json: not found');
+    console.log(codeFrameColumns(result, {}, {
+        highlightCode: true,
+    }));
     
-    const [error, info] = await tryToCatch(readjson, name);
-    
-    if (!error)
-        return console.log(info.version || 'no version');
-    
-    if (error.code === 'ENOENT')
-        return console.error('package.json: not found');
-    
-    return console.error('package.json:', error.message);
+    process.exit();
 }
+
+if (error.code === 'ENOENT')
+    process.exit(1);
+
+console.error('package.json:', error.message);

@@ -1,6 +1,6 @@
 # Version-io
 
-Semantic versioning tool. Apply major, minor, patch and version to `package.json`.
+Semantic versioning tool. Apply `major`, `minor`, `patch` and version to `package.json`.
 
 ## Install
 
@@ -30,24 +30,37 @@ Apply minor, major or patch:
 v1.1.0
 ```
 
+Extended view:
+
+```
+# version -e
+
+  1 | {
+  2 |     "version": "5.0.0",
+  3 |     "engines": {
+  4 |         "node": ">=22"
+  5 |     }
+  6 | }
+```
+
 ## Use as module
 
 Install `version-io` with:
 
 ```
-npm i version-io --save
+npm i version-io -g
 ```
 
-Format: `version(number, callback);`
+## API
 
-- `number` could be new version number or `minor|major|patch`
+### `updateVersion(number: VersionNumber)`
 
-You could update version in `package.json` with:
+- `VersionNumber` could be new version number or `minor|major|patch`
 
 ```js
-import versionio from 'version-io';
+import {updateVersion} from 'version-io';
 
-const version = await versionio();
+await updateVersion('patch');
 ```
 
 ## License

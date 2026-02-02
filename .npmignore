@@ -1,6 +1,5 @@
 .*
-madrun.js
-
 yarn-error.log
 coverage
 *.config.*
+*.spec.js
