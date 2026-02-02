@@ -6,7 +6,8 @@
         ".*",
         "**/bin",
         "*.config.*",
-        "**/*.spec.*"
+        "**/*.spec.*",
+        "**/*.config.*"
     ],
     "branches": 100,
     "lines": 100,
