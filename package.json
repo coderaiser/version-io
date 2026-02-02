@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^9.23.0",
-    "eslint-plugin-putout": "^26.1.0",
+    "eslint-plugin-putout": "^30.0.2",
     "madrun": "^11.0.0",
     "putout": "^39.5.0"
   },
