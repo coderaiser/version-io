@@ -41,6 +41,7 @@ if (!error) {
     }
     
     const {codeFrameColumns} = await import('@putout/babel');
+    
     const result = stringify({
         version: info.version,
         engines: info.engines,

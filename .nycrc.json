@@ -1,13 +1,13 @@
 {
     "extension": [".js"],
-    "check-coverage": false,
+    "checkCoverage": false,
     "all": true,
     "exclude": [
-        ".*",
+        "**/*.spec.*",
+        "**/*.config.*",
         "**/bin",
         "*.config.*",
-        "**/*.spec.*",
-        "**/*.config.*"
+        ".*"
     ],
     "branches": 100,
     "lines": 100,

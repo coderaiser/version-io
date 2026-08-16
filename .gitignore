@@ -1,7 +1,8 @@
-node_modules
-npm-debug.log
-.idea
 *.swp
-yarn-error.log
-coverage
 *.lock
+*.log
+
+.idea
+
+node_modules
+coverage
