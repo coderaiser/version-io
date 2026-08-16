@@ -32,7 +32,7 @@
     "madrun": "^13.0.4",
     "putout": "^42.11.0",
     "superc8": "^12.7.0",
-    "supertape": "^12.2.0"
+    "supertape": "^13.5.1"
   },
   "scripts": {
     "test": "madrun test",
