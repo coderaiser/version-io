@@ -1,3 +1,14 @@
+2026.08.22, v6.2.0
+
+feature:
+- b22a47f unknown argument
+- 3901d9f version-io: superc8 vundefined
+- 44f3a56 version-io: supertape v13.5.1
+- 1157766 version-io: superc8 v12.7.0
+- 11d7fab version-io: madrun v13.0.4
+- 3ff07e6 version-io: eslint-plugin-putout v31.4.2
+- 2bf59d4 version-io: eslint v10.0.0
+
 2026.02.03, v6.1.2
 
 fix:
