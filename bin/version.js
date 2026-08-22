@@ -16,6 +16,11 @@ if (/^(-v|--version)$/.test(arg))
     process.exit();
 
 if (arg && !isExtended) {
+    if (arg.startsWith('-')) {
+        console.error(`Unknown argument: '${arg}'`);
+        process.exit(1);
+    }
+    
     const [e, data] = await tryToCatch(updateVersion, arg);
     
     if (e)
